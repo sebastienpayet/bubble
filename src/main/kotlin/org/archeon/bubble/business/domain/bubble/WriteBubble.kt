@@ -7,8 +7,8 @@ import org.archeon.bubble.business.port.gateway.NetworkGateway
 import org.archeon.bubble.business.port.repository.EntityWriteRepository
 
 class WriteBubble<T: BubbleEntity>(
+    override var id: String? = null,
     override val address: String,
-    override val id: String,
     override val inputEntitiesClasses: List<String>,
     override val networkGateway: NetworkGateway,
     override val writeRepository: EntityWriteRepository<T>
