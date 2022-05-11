@@ -1,4 +1,4 @@
-package org.archeon.bubble.infrastructure.service
+package org.archeon.bubble.infrastructure.demo.service
 
 import javax.enterprise.context.ApplicationScoped
 

@@ -1,36 +1,36 @@
 package org.archeon.bubble.business.domain.bubble
 
-import org.archeon.bubble.business.port.BubbleEntity
-import org.archeon.bubble.business.port.Bubbleable
-import org.archeon.bubble.business.port.Writable
-import java.net.URL
+import org.archeon.bubble.business.port.bubble.Bubble
+import org.archeon.bubble.business.port.bubble.BubbleEntity
+import org.archeon.bubble.business.port.bubble.Writable
+import org.archeon.bubble.business.port.gateway.NetworkGateway
+import org.archeon.bubble.business.port.repository.EntityWriteRepository
+import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaClass
 
-class WriteBubble(
-    override val outputEntity: BubbleEntity,
-    override val url: URL,
-    override val inputEntities: List<BubbleEntity>
-) : Writable, Bubbleable {
-    override fun scanBubbles(): List<Bubbleable> {
-        TODO("Not yet implemented")
-    }
-
-    override fun sendSubscription(url: URL) {
-        TODO("Not yet implemented")
-    }
-
-    override fun manageSubscription() {
-        TODO("Not yet implemented")
-    }
-
+class WriteBubble<T: BubbleEntity>(
+    override val address: String,
+    override val id: String,
+    override val inputEntitiesClasses: List<String>,
+    override val networkGateway: NetworkGateway,
+    override val writeRepository: EntityWriteRepository<T>
+) : Writable<T>, Bubble {
     override fun delete(id: String) {
-        TODO("Not yet implemented")
+        writeRepository.delete(id)
     }
 
     override fun manageInput(input: BubbleEntity) {
         TODO("Not yet implemented")
     }
 
-    override fun propagateChange(entity: BubbleEntity) {
+    override fun manageDelete(input: BubbleEntity) {
+        TODO("Not yet implemented")
+    }
+
+    override fun sendDelete(entity: T) {
+        TODO("Not yet implemented")
+    }
+
+    override fun sendUpdate(entity: T) {
         TODO("Not yet implemented")
     }
 }
