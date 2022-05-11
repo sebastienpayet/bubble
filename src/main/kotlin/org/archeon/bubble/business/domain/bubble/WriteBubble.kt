@@ -5,7 +5,6 @@ import org.archeon.bubble.business.port.bubble.BubbleEntity
 import org.archeon.bubble.business.port.bubble.Writable
 import org.archeon.bubble.business.port.gateway.NetworkGateway
 import org.archeon.bubble.business.port.repository.EntityWriteRepository
-import kotlin.reflect.jvm.internal.impl.load.java.structure.JavaClass
 
 class WriteBubble<T: BubbleEntity>(
     override val address: String,

@@ -20,15 +20,6 @@ public class GreetingResourceTest {
     }
 
     @Test
-    public void testOtherHelloEndpoint() {
-        given()
-                .when().get("/dude/hello")
-                .then()
-                .statusCode(200)
-                .body(is("hello world dude"));
-    }
-
-    @Test
     public void testHelloNameEndpoint() {
         given()
                 .when().get("/hello/sebastien")
