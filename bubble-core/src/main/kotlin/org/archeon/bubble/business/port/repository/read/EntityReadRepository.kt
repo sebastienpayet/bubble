@@ -1,4 +1,4 @@
-package org.archeon.bubble.business.port.repository
+package org.archeon.bubble.business.port.repository.read
 
 interface EntityReadRepository<T> {
     fun read(id: String): T

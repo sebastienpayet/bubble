@@ -1,4 +1,4 @@
-package org.archeon.bubble.business.port.repository
+package org.archeon.bubble.business.port.repository.write
 
 interface EntityWriteRepository<T> {
     fun create(entity: T): T
