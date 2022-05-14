@@ -1,4 +1,4 @@
-package org.archeon.bubble.infrastructure.network.gateway.rest
+package org.archeon.example.demo.service
 
 import org.archeon.bubble.business.port.bubble.Bubble
 import org.archeon.bubble.business.port.network.gateway.NetworkGateway

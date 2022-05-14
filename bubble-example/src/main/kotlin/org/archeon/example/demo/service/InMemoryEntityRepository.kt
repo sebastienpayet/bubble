@@ -1,11 +1,10 @@
-package org.archeon.bubble.infrastructure.repository.inMemory
+package org.archeon.example.demo.service
 
 import org.archeon.bubble.business.port.bubble.BubbleEntity
 import org.archeon.bubble.business.port.repository.read.EntityReadRepository
 import org.archeon.bubble.business.port.repository.read.ListCommand
 import org.archeon.bubble.business.port.repository.write.EntityWriteRepository
 import java.util.*
-import javax.enterprise.context.ApplicationScoped
 
 open class InMemoryEntityRepository<T : BubbleEntity> : EntityReadRepository<T>, EntityWriteRepository<T> {
 
