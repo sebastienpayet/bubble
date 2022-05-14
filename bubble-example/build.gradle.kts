@@ -17,6 +17,7 @@ dependencies {
     implementation("io.quarkus:quarkus-resteasy-reactive")
     implementation(project(":bubble-core"))
     implementation("io.github.microutils:kotlin-logging:2.1.21")
+    implementation("org.junit.jupiter:junit-jupiter:5.8.1")
     testImplementation("io.quarkus:quarkus-junit5")
     testImplementation("io.rest-assured:rest-assured")
 }

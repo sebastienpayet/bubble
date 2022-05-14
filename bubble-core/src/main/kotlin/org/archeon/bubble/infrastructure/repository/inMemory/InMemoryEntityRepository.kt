@@ -2,11 +2,12 @@ package org.archeon.bubble.infrastructure.repository.inMemory
 
 import org.archeon.bubble.business.port.bubble.BubbleEntity
 import org.archeon.bubble.business.port.repository.read.EntityReadRepository
-import org.archeon.bubble.business.port.repository.write.EntityWriteRepository
 import org.archeon.bubble.business.port.repository.read.ListCommand
+import org.archeon.bubble.business.port.repository.write.EntityWriteRepository
 import java.util.*
+import javax.enterprise.context.ApplicationScoped
 
-open class InMemoryEntityRepository<T: BubbleEntity>: EntityReadRepository<T>, EntityWriteRepository<T> {
+open class InMemoryEntityRepository<T : BubbleEntity> : EntityReadRepository<T>, EntityWriteRepository<T> {
 
     private val entities: LinkedHashMap<String, T> = LinkedHashMap()
 
@@ -18,15 +19,10 @@ open class InMemoryEntityRepository<T: BubbleEntity>: EntityReadRepository<T>, E
         TODO("Not yet implemented")
     }
 
-    override fun create(entity: T): T {
+    override fun save(entity: T): T {
         if (entity.id == null) {
             entity.id = UUID.randomUUID().toString()
         }
-        entities[entity.id!!] = entity
-        return entity
-    }
-
-    override fun update(entity: T): T {
         entities[entity.id!!] = entity
         return entity
     }

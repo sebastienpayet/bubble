@@ -2,7 +2,9 @@ package org.archeon.bubble.infrastructure.network.gateway.rest
 
 import org.archeon.bubble.business.port.bubble.Bubble
 import org.archeon.bubble.business.port.network.gateway.NetworkGateway
+import javax.enterprise.context.ApplicationScoped
 
+@ApplicationScoped
 class RestNetworkGateway : NetworkGateway {
 
     private val FIRST_PORT = 53000
