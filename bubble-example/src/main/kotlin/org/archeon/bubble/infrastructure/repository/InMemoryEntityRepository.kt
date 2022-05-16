@@ -1,8 +1,8 @@
-package org.archeon.example.demo.service
+package org.archeon.bubble.infrastructure.repository
 
 import org.archeon.bubble.business.port.bubble.BubbleEntity
+import org.archeon.bubble.business.port.command.ListCommand
 import org.archeon.bubble.business.port.repository.read.EntityReadRepository
-import org.archeon.bubble.business.port.repository.read.ListCommand
 import org.archeon.bubble.business.port.repository.write.EntityWriteRepository
 import java.util.*
 
@@ -15,7 +15,7 @@ open class InMemoryEntityRepository<T : BubbleEntity> : EntityReadRepository<T>,
     }
 
     override fun list(command: ListCommand): Set<T> {
-        TODO("Not yet implemented")
+        return entities.values.toSet()
     }
 
     override fun save(entity: T): T {

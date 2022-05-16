@@ -1,6 +1,6 @@
-package org.archeon.example.demo.controller
+package org.archeon.bubble.infrastructure.controller
 
-import org.archeon.example.demo.service.GreetingService
+import org.archeon.bubble.infrastructure.service.GreetingService
 import javax.ws.rs.GET
 import javax.ws.rs.Path
 import javax.ws.rs.Produces

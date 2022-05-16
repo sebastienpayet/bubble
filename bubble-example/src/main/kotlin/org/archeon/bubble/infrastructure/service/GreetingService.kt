@@ -1,10 +1,12 @@
-package org.archeon.example.demo.service
+package org.archeon.bubble.infrastructure.service
 
+import org.archeon.bubble.infrastructure.bubble.read.user.UserListCommand
+import org.archeon.bubble.infrastructure.bubble.read.user.UserReadBubble
 import javax.enterprise.context.ApplicationScoped
 
 @ApplicationScoped
 class GreetingService(
-    private val userBubble: UserBubble
+    private val userBubble: UserReadBubble
 ) {
 
     fun greeting(name: String): String {
