@@ -5,6 +5,4 @@ import org.archeon.bubble.business.port.network.gateway.NetworkGateway
 
 interface NetworkPort<T: BubbleEntity> {
     val networkGateway: NetworkGateway
-
-    fun askForRegistration(bubble: T): String
 }
