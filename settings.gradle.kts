@@ -1,5 +1,5 @@
 rootProject.name = "bubble-framework"
-include("bubble-core")
+include("bubble-api")
 include("bubble-example")
 
 pluginManagement {

@@ -1,3 +1,3 @@
 package org.archeon.bubble.business.port.command
 
-interface ListCommand
+interface ListCommand: Command

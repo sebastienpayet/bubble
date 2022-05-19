@@ -16,7 +16,7 @@ dependencies {
     implementation(enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}"))
     implementation("io.quarkus:quarkus-resteasy-reactive")
     implementation("io.quarkus:quarkus-resteasy-reactive-jackson")
-    implementation(project(":bubble-core"))
+    implementation(project(":bubble-api"))
     implementation("io.github.microutils:kotlin-logging:2.1.21")
     implementation("org.junit.jupiter:junit-jupiter:5.8.1")
     testImplementation("io.quarkus:quarkus-junit5")
