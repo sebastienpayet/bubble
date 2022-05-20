@@ -5,4 +5,5 @@ import org.archeon.bubble.business.port.network.gateway.NetworkGateway
 
 interface NetworkPort<T: BubbleEntity> {
     val networkGateway: NetworkGateway
+    val address: String?
 }

@@ -20,10 +20,10 @@ class RestNetworkGateway : NetworkGateway {
 	}
 
 	override fun registerBubble(command: RegisterCommand) {
-		if (addressesByType[command.entityType] == null) {
-			addressesByType[command.entityType] = mutableSetOf(command.address)
+		if (addressesByType[command.produceEntityType] == null) {
+			addressesByType[command.produceEntityType] = mutableSetOf(command.address)
 		} else {
-			addressesByType[command.entityType]?.add(command.address)
+			addressesByType[command.produceEntityType]?.add(command.address)
 		}
 	}
 }
