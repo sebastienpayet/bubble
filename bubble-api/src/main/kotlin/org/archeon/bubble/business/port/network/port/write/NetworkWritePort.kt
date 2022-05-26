@@ -5,8 +5,7 @@ import org.archeon.bubble.business.port.event.BubbleInputEvent
 import org.archeon.bubble.business.port.event.BubbleOutputEvent
 
 interface NetworkWritePort<T : BubbleEntity> {
-    fun entryPointSave(entity: T)
-    fun entryPointDelete(id: String)
-    fun entryPointManageInputEvent(event: BubbleInputEvent)
-    fun entryPointManageOutputEvent(event: BubbleOutputEvent)
+    fun handleInputEvent(event: BubbleInputEvent)
+    fun handleOutputEvent(event: BubbleOutputEvent)
+    fun handleSynchronousInputEvent(event: BubbleInputEvent): T
 }

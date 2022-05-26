@@ -1,7 +1,7 @@
 rootProject.name = "bubble-framework"
 include("bubble-api")
-include("bubble-example")
-include("bubble-spring")
+include("bubble-example-quarkus")
+include("bubble-example-spring")
 
 pluginManagement {
     val quarkusPluginVersion: String by settings
